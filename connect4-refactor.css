@@ -1,9 +1,53 @@
+body {
+background: url("https://cdn.pixabay.com/photo/2017/09/12/11/56/universe-2742113__340.jpg");
+background-size:100%;
+}
+.starting-inputs{
+    border-radius:15%;
+    text-align:center;
+    font-family:Monoton;
+    font-size:15px;
+    background-color:rgb(182, 158, 158);
+}
+#starting-wrapper{
+    position: absolute;
+    z-index: 15;
+    top:25%;
+    left: 25%;
+    margin: -100px 0 0 -150px;
+}
+#start-game {
+    position:relative;
+    left:38%;
+    margin:3px;
+    border-radius: 25%;
+    font-family: Monoton;
+    text-align: center;
+    font-size:30px;
+    color: rgb(181, 21, 21);
+}
+#start-game:hover {
+    cursor: pointer;
+    background-color: rgba(181, 21, 21, 0.8);
+    text-decoration:underline black;
+    color:black;
+}
+
+
 /* game board table */
+#game {
+    position: absolute;
+  z-index: 15;
+  top:40%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
 
 #board td {
     width: 50px;
     height: 50px;
-    border: solid 1px #666;
+    border: solid 3px #666;
+    border-radius:75%;
   }
   
   /* pieces are div within game table cells: draw as colored circles */
@@ -18,7 +62,8 @@
   /* column-top is table row of clickable areas for each column */
   
   #column-top td {
-    border: dashed 1px lightgray;
+    border: dashed 2px lightgray;
+    border-radius:75%;
   }
   
   #column-top td:hover {

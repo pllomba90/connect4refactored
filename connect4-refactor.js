@@ -6,9 +6,9 @@
 //  */
 
 class Game {
-    constructor (p1, p2, width = 7, height = 6){
+    constructor (p1, p2, width, height){
         this.players = [p1, p2];
-        this.width = width;
+        this.width = width
         this.height = height;
         this.currPlayer = p1
         this.makeBoard();
@@ -162,5 +162,7 @@ class Player {
 document.getElementById('start-game').addEventListener('click', () => {
     let p1 = new Player(document.getElementById('p1-color').value);
     let p2 = new Player(document.getElementById('p2-color').value);
-    new Game(p1, p2);
+    let width = document.getElementById("width").value;
+    let height = document.getElementById("height").value
+    new Game(p1, p2, width , height);
 });
